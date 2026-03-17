@@ -48,7 +48,7 @@ Observed notebook outputs:
 - Trained score: `0.45183695641617005`
 - L1 reconstruction error: `7.081297929995559`
 
-Gradient-check sanity result (from validation run):
+Gradient-check result (from validation run):
 
 - Relative difference: `2.1452381569477388e-12` (very small, indicates correct gradient implementation).
 
@@ -62,7 +62,7 @@ This part was pretty useful for understanding how sparsity and KL regularization
 ## Part 3B - Transformer Language Model (Shakespeare)
 
 ### A. Model description and parameter choices
-I implemented a GPT-style decoder-only Transformer for character-level text generation.
+Implementing a GPT-style decoder-only Transformer for character-level text generation.
 
 Main configuration used:
 
@@ -195,4 +195,4 @@ Across all three parts, I think the key theme was implementing core generative-m
 - Sequence modeling with masked attention (Transformer)
 - Iterative denoising for generation (Diffusion)
 
-The assignment connected the math to practical PyTorch implementations and highlighted how debugging tools (especially gradient checking and simple sanity runs) are critical for correctness.
+The assignment connected the math to practical PyTorch/numpy implementations and highlighted how debugging tools (especially gradient checking and simple sanity runs) are critical for correctness. Overall I had a very challenging time finishing the work, but I feel like I learnt a lot too. 
