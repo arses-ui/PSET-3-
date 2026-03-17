@@ -1,7 +1,7 @@
 # ENGS 106 - Assignment 3 Report (Parts 3A, 3B, 3C)
 
-Name: [Your Name]  
-Date: [Date]
+Name: Arses Prasai
+Date: feb 15  
 
 ## Part 3A - Sparse Autoencoder
 
