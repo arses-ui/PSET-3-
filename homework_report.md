@@ -31,7 +31,7 @@ These settings match the lab defaults and are appropriate because the hidden lay
   - Reconstruction squared error
   - Weight decay regularization
   - KL sparsity penalty
-- Implemented backprop to compute `W1grad`, `W2grad`, `b1grad`, `b2grad`.
+- I `Implemented backprop to compute `W1grad`, `W2grad`, `b1grad`, `b2grad`.
 
 3. `computeNumericalGradient(J, theta)`
 - Implemented centered finite difference:
@@ -39,7 +39,7 @@ These settings match the lab defaults and are appropriate because the hidden lay
 - Used `eps = 1e-4`.
 
 4. `predict(self, samples)`
-- Implemented normal forward propagation through hidden and output layers and returned reconstructed outputs.
+- I Implemented normal forward propagation through hidden and output layers and returned reconstructed outputs.
 
 ### C. Evaluation
 Observed notebook outputs:
@@ -55,7 +55,7 @@ Gradient-check sanity result (from validation run):
 The trained model significantly reduced reconstruction cost, and filter visualizations showed structured learned features.
 
 ### D. Reflection
-This part was useful for understanding how sparsity and KL regularization change hidden-layer behavior compared to a plain autoencoder. The gradient check was especially important for debugging and gave confidence that backprop was implemented correctly.
+This part was pretty useful for understanding how sparsity and KL regularization change hidden-layer behavior compared to a plain autoencoder. The gradient check was important for debugging and playing around more with the backpropgation code and gave confidence that backprop was implemented correctly.
 
 ---
 
@@ -75,7 +75,7 @@ Main configuration used:
 - `batch_size = 64`
 - `max_iters = 2000`
 
-This setup balances model capacity and runtime for a lab assignment. Six layers and six heads are enough to learn local and medium-range token dependencies in Shakespeare text without making training too slow.
+This setup balances model capacity and runtime. Six layers and six heads should be enough to learn local and medium-range token dependencies in Shakespeare text without making training too slow.
 
 ### B. Implementation-required questions
 1. `Attention.attention(self, q, k, v, T)`
@@ -105,7 +105,7 @@ Observed notebook outputs:
 > Romeo, thou hast not that thou makest thy breath,  
 > Nor nothing an agreet to thy party sen ...
 
-The generated sample is not perfect English, but it captures style-like structure (speaker tags, line breaks, archaic wording), which is expected for a small model and limited training.
+You can see that the generated sample is not perfect English, but it captures style-like structure (speaker tags, line breaks, archaic wording), which is expected for a small model and limited training.
 
 ### D. Reflection
 This part clarified how attention, masking, and positional encodings combine in a working autoregressive model. I also learned that qualitative generation can already look stylistically meaningful even before full convergence.
@@ -181,15 +181,15 @@ Training loss by epoch:
 - Epoch 9: `0.0265`
 - Epoch 10: `0.0262`
 
-Loss decreases steadily, indicating successful learning of the denoising objective. Generated-sample and trajectory figures show denoising progression from noise to digit-like outputs.
+As you can see, loss decreases steadily, indicating successful learning of the denoising objective. Generated-sample and trajectory figures show denoising progression from noise to digit-like outputs.
 
 ### D. Reflection
-This part made the forward/reverse diffusion math concrete in code. Implementing sampling step-by-step gave a much clearer understanding of how generation emerges from iterative denoising.
+This part made the forward/reverse diffusion math concrete for me in code. Implementing sampling step-by-step gave me a much clearer understanding of how generation emerges from iterative denoising.
 
 ---
 
 ## Overall Takeaways
-Across all three parts, the key theme was implementing core generative-model mechanics directly:
+Across all three parts, I think the key theme was implementing core generative-model mechanics directly:
 
 - Sparse coding and regularized reconstruction (Autoencoder)
 - Sequence modeling with masked attention (Transformer)
