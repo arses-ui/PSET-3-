@@ -1,0 +1,11 @@
+numpy==1.26.4
+jupyter
+matplotlib
+seaborn==0.13.2
+cuda-version==12.4
+cuda==12.4.1
+pytorch
+pytorch-cuda==12.4
+torchaudio
+torchvision
+tqdm

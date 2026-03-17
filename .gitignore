@@ -1,0 +1,16 @@
+.DS_Store
+**/.DS_Store
+
+# Python cache/virtual env
+__pycache__/
+**/__pycache__/
+venv/
+**/venv/
+
+# Generated training artifacts
+3B/model/
+3C/diffusion_model.pt
+
+# Downloaded datasets
+3B/data/
+3C/data/
