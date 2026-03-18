@@ -55,7 +55,7 @@ Gradient-check result (from validation run):
 The trained model significantly reduced reconstruction cost, and filter visualizations showed structured learned features.
 
 ### D. Reflection
-This part was pretty useful for understanding how sparsity and KL regularization change hidden-layer behavior compared to a plain autoencoder. The gradient check was important for debugging and playing around more with the backpropgation code and gave confidence that backprop was implemented correctly.
+This part was pretty useful for understanding how sparsity and KL regularization change hidden-layer behavior compared to a plain autoencoder. The gradient check was important for debugging and playing around more with the backpropgation code and gave confidence that backprop was implemented correctly. What took me the longest in this assignment was to be able to fully understand te derivations of the backpropagation formulae. While partial derivative formulae for weights and biases turned out pretty simple by the end of derivation, I spent some time trying to fully understand it and then try to implement it by myself. Once that became intuitive, rest of the coding part was just inserting appropriate formulae. I feel like this was a very important step in fully internalizing backpropagation which is such a fundamental concept. 
 
 ---
 
@@ -93,7 +93,7 @@ This setup balances model capacity and runtime. Six layers and six heads should 
 - Filled sinusoidal positional encoding matrix:
   - even indices: `sin(...)`
   - odd indices: `cos(...)`
-- Registered encoding as a non-trainable buffer.
+
 
 ### C. Evaluation
 Observed notebook outputs:
@@ -189,10 +189,10 @@ This part made the forward/reverse diffusion math concrete for me in code. Imple
 ---
 
 ## Overall Takeaways
-Across all three parts, I think the key theme was implementing core generative-model mechanics directly:
+Across all three parts, I think the key theme was understanding and implementing core generative-model mechanics directly:
 
 - Sparse coding and regularized reconstruction (Autoencoder)
 - Sequence modeling with masked attention (Transformer)
 - Iterative denoising for generation (Diffusion)
 
-The assignment connected the math to practical PyTorch/numpy implementations and highlighted how debugging tools (especially gradient checking and simple sanity runs) are critical for correctness. Overall I had a very challenging time finishing the work, but I feel like I learnt a lot too. 
+The assignment connected the math to practical PyTorch/numpy implementations and highlighted how using debugging tools (especially gradient checking and simple sanity runs) are important for ensuring correctness. Overall I had a very challenging time finishing the work, but I feel like I learnt a lot too. 
